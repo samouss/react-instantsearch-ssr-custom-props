@@ -1,0 +1,22 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "last 2 versions",
+          "ie >= 9",
+        ],
+      },
+    }],
+    "react",
+    "stage-2",
+  ],
+  "plugins": [
+    ["transform-runtime", {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true
+    }],
+    "transform-regenerator",
+  ],
+}
