@@ -16,6 +16,7 @@ server.get('/', async (req, res) => {
   const state = SearchParameters.make({
     hitsPerPage: 3,
     facets: ['category'],
+    facetFilters: [['category:Small storage', 'category:Eating']],
   });
 
   // Make the request to Algolia with the search for multiple indexes
@@ -27,6 +28,7 @@ server.get('/', async (req, res) => {
       params: {
         hitsPerPage: 3,
         facets: ['category'],
+        facetFilters: [['category:Small storage', 'category:Eating']],
       },
     },
   ]);
